@@ -1,4 +1,5 @@
 body {
+    font-family: "Margarine", cursive;
     background-image: url("../img/bf-tile.jpg");
 }
 
@@ -13,12 +14,22 @@ ul {
 
 .title-jumbotron {
     background-image: url("../img/burger-background.png");
-    border-bottom: 5px solid #dddddd;
+    background-size: cover;
+    border-bottom: 5px ridge #ad7;
 }
 
 .transparent {
-    background: rgba(25,25,25,0.6);
-    border: 5px solid #dddddd;
+    background: rgba(196,108,208,0.7);
+    border: 5px ridge #c7d;
     padding: 20px;
-    color: #ffffff;
+    color: #fff;
+    text-shadow: 3px 3px #ad7;
+}
+
+.transparent-2 {
+    background: rgba(157,207,108,0.7);
+    border: 5px ridge #ad7;
+    padding: 20px;
+    color: #fff;
+    text-shadow: 2px 2px #c7d;
 }

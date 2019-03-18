@@ -2,15 +2,15 @@
     <div class = "container">
         <div class = "row justify-content-center">
             <div class = "col-auto mx-auto transparent">
-                <h1 class = "display-4">Eat Da Burger!</h1>
+                <h1 class = "display-4">eat da burger!</h1>
             </div>
         </div>
     </div>
 </div>
 <div class = "container">
     <div class = "row justify-content-center">
-        <div class = "col-12 col-md-5 transparent m-2">
-            <h2>Burgers Yet To Be Eaten!</h2>
+        <div class = "col-12 col-md-5 transparent-2 m-2">
+            <h2>burgers yet to be eaten!</h2>
             <hr>
             <ul>
                 {{#each burgers}}
@@ -18,7 +18,8 @@
                             {{> burger-block isDevoured=true}}
                     {{/unless}}
                 {{/each}}
-            </ul>            
+            </ul>
+            <hr>
             <form class = "burger-form">
                 <div class = "form-inline">
                     <button type = "submit" class = "btn btn-secondary mr-3">Add a Burger</button>
@@ -27,8 +28,8 @@
                 <span id = "warning-message"></span>
             </form>
         </div>
-        <div class = "col-12 col-md-5 transparent m-2">
-            <h2>Burgers I Have Eaten.</h2>
+        <div class = "col-12 col-md-5 transparent-2 m-2">
+            <h2>burgers i has eaten.</h2>
             <hr>
             <ul>
                 {{#each burgers}}
