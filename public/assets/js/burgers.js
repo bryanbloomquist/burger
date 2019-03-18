@@ -2,24 +2,31 @@ $(function() {
 
     $(".change-devoured").on("click", function(event) {
         var id = $(this).data("id");
-        var devouredStatus = $(this).data("newdevoured");
-        var newStatus = {devoured: devouredStatus};
+        console.log(id);
+        var devouredStatus = $(this).data("devoured");
+        var eatIt;
+        if (!devouredStatus) {
+            eatIt = 1;
+        } else {eatIt = 0};
+        console.log(devouredStatus);
+        var newStatus = {devoured: eatIt};
+        console.log(newStatus);
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: newStatus
         }).then(
             function() {
-                console.log("Changed devoured to " + newStatus);
+                console.log("Changed devoured to " + devouredStatus);
                 location.reload();
             }
         );
     });
 
-    $(".add-burger").on("submit", function(event) {
+    $(".burger-form").on("submit", function(event) {
         event.preventDefault();
         var newBurger = {
-            burger_name: $("burger-name").val().trim(),
-            devoured: false
+            burger_name: $("#burger-name").val().trim(),
+            devoured: 0
         };
         $.ajax("/api/burgers", {
             type: "POST",

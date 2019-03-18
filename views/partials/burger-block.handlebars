@@ -1,6 +1,6 @@
 <li>
-    {{name}}
-    <button class = "change-devoured" data-id = "{{id}}" data-newdevoured = "{{isDevoured}}">
-        {{#if devoured}}Eat the Burger.{{else}}Order it again.{{/if}}
+    <button class = "change-devoured mb-1" data-id = "{{id}}" data-devoured = "{{devoured}}">
+        {{#if devoured}}Order It{{else}}Eat It{{/if}}
     </button>
+    {{burger_name}}
 </li>

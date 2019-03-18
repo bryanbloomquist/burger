@@ -1,0 +1,24 @@
+body {
+    background-image: url("../img/bf-tile.jpg");
+}
+
+hr {
+    background-color: #dddddd;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.title-jumbotron {
+    background-image: url("../img/burger-background.png");
+    border-bottom: 5px solid #dddddd;
+}
+
+.transparent {
+    background: rgba(25,25,25,0.6);
+    border: 5px solid #dddddd;
+    padding: 20px;
+    color: #ffffff;
+}

@@ -1,27 +1,41 @@
-<h1>Eat Da Burger!</h1>
-
-<h2>Burger Yet To Be Eaten!</h2>
-
-
-    {{#each burgers}}
-        {{#unless devoured}}
-                {{> burger-block isDevoured=true}}
-        {{/unless}}
-    {{/each}}
-
-<h2>Burgers Ate Already!</h2>
-
-    {{#each}}
-        {{#if devoured}}
-                {{> burger-block isDevoured=false}}
-        {{/if}}
-    {{/each}}
-
-<h2>Add A Burger To Devour</h2>
-<form class = "add-burger">
-    <div class = "form-group">
-        <label for = "burger-name">Burger Name:</label>
-        <input type = "text" id = "burger-name" name = "name">
+<div class = "jumbotron jumbotron-fluid title-jumbotron py-3">
+    <div class = "container">
+        <div class = "row justify-content-center">
+            <div class = "col-auto mx-auto transparent">
+                <h1 class = "display-4">Eat Da Burger!</h1>
+            </div>
+        </div>
     </div>
-    <button type = "submit">Add Burger</button>
-</form>
+</div>
+<div class = "container">
+    <div class = "row justify-content-center">
+        <div class = "col-12 col-md-5 transparent m-2">
+            <h2>Burgers Yet To Be Eaten!</h2>
+            <hr>
+            <ul>
+                {{#each burgers}}
+                    {{#unless devoured}}
+                            {{> burger-block isDevoured=true}}
+                    {{/unless}}
+                {{/each}}
+            </ul>            
+            <form class = "burger-form">
+                <div class = "form-inline">
+                    <button type = "submit" class = "btn btn-secondary mr-3">Add a Burger</button>
+                    <input type = "text" id = "burger-name" class = "form-control" name = "name">
+                </div>
+            </form>
+        </div>
+        <div class = "col-12 col-md-5 transparent m-2">
+            <h2>Burgers I Have Eaten.</h2>
+            <hr>
+            <ul>
+                {{#each burgers}}
+                    {{#if devoured}}
+                            {{> burger-block isDevoured=false}}
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
