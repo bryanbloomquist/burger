@@ -24,19 +24,28 @@ $(function() {
 
     $(".burger-form").on("submit", function(event) {
         event.preventDefault();
-        var newBurger = {
-            burger_name: $("#burger-name").val().trim(),
-            devoured: 0
-        };
-        $.ajax("/api/burgers", {
-            type: "POST",
-            data: newBurger
-        }).then(
-            function() {
-                console.log("Added new burger");
-                location.reload();
-            }
-        );
+        var valid = true;
+        if ($("#burger-name").val().trim() === "") {
+            valid = false;
+        }
+        if (valid === false) {
+            $("#warning-message").html("Burger Name Can Not Be Empty");
+        } else if (valid === true) {
+            $("#warning-message").html("");
+            var newBurger = {
+                burger_name: $("#burger-name").val().trim(),
+                devoured: 0
+            };
+            $.ajax("/api/burgers", {
+                type: "POST",
+                data: newBurger
+            }).then(
+                function() {
+                    console.log("Added new burger");
+                    location.reload();
+                }
+            );
+        }
     });
 
 });
