@@ -4,7 +4,7 @@ body {
 }
 
 hr {
-    background-color: #dddddd;
+    background-color: #683;
 }
 
 ul {
@@ -23,7 +23,7 @@ ul {
     border: 5px ridge #c7d;
     padding: 20px;
     color: #fff;
-    text-shadow: 3px 3px #683;
+    text-shadow: 3px 3px #838;
 }
 
 .transparent-2 {
@@ -31,5 +31,12 @@ ul {
     border: 5px ridge #ad7;
     padding: 20px;
     color: #fff;
-    text-shadow: 2px 2px #838;
+    text-shadow: 2px 2px #683;
+}
+
+.burger-button {
+    background-color: #c7d;
+    color: #fff;
+    text-shadow: 1px 1px #838;
+    border: 1px solid #838;
 }
